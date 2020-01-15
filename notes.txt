@@ -1,0 +1,17 @@
+- na czym polega model deep learningowy
+    - jest to graf - skierowany, acykliczny, reprezentujący przepływ (propagacja danych)
+    - krawędzie reprezentują wagi, węzły reprezentują operacje
+    - graf w modelu to zwykle najważniejsza część, oprócz grafu są jeszcze jakieś metadane specyficzne dla framewora/reprezentacji
+    - graf nazywany jest różnie - computation, network, function
+    - graf reprezentuje funkcję, którą model w trakcie uczenia się próbuje aproksymować
+    - w praktyce zawsze składa się z operacji i tensorów reprezentujących dane/krawędzie
+- na czym polega wykonanie grafu/modelu
+    - co to są kernele
+    - dlaczego różny HW lepiej radzi sobie z różnymi operacjami - konwolucje na GPU
+    - czym różnią się kernele
+    - jak załatwić mnogość frameworków (i reprezentacji) w połączeniu z mnogością HW i kerneli
+- optymalizacje
+    - optymalizacje na poziomie kerneli i HW
+    - dlaczego warto robić optymalizacje na poziomie grafu
+    - przykłady optymalizacji (z notatnika)
+    

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>nGraph</title>
+
+    <link rel="stylesheet" href="reveal.js/reveal.css">
+    <link rel="stylesheet" href="reveal.js/theme/night.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300&amp;subset=latin-ext" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet"> 
+    <link rel="stylesheet" href="tuning.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <br><br>
+            <img src="img/ngraph.png" style="width: 40%"><br>
+            <h3 class="no-transform">nGraph</h3>
+            <br><br>
+            <div class="accent small">
+                <i class="fas fa-user white"></i>&nbsp;&nbsp;Tomasz Dołbniak &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-microphone white"></i>&nbsp;&nbsp;3camp #61 &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-map-marker-alt white"></i>&nbsp;&nbsp;Gdańsk 2020
+            </div>
+        </section>
+        <section>
+            <img src="img/intel-ai-1.svg" style="width: 30%">
+            <br><br>
+            <div class="fragment">
+                <div style="display: flex; justify-content: space-evenly">
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                        <img src="img/ngraph.png" style="width: 14rem">
+                        <span>nGraph</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                        <img src="img/onnx.png" style="width: 10rem">
+                        <span>ONNX</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                        <img src="img/ONNX_Runtime_logo_dark.png" style="width: 10rem">
+                        <span>ONNXRuntime</span>                            
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <span class="fragment">
+                <a href="https://www.linkedin.com/in/tomasz-dolbniak/"><i class="fab fa-linkedin"></i> tomasz-dolbniak</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/tomdol"><i class="fab fa-github-square"></i> tomdol</a><br><br>
+            </span>
+        </section>
+    </div>
+</div>
+
+<script src="reveal.js/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        controls: false,
+        slideNumber: 'c/t',
+        transition: 'slide',
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            // { src: 'plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+</body>
+</html>
