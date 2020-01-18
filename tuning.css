@@ -6,6 +6,8 @@
 .gray { color: #666 !important; }
 .white {color: #FFF !important; }
 .small { font-size: 0.6em !important; }
+.vsmall { font-size: 0.4em !important; }
+.src {color: #777 !important; }
 ul { list-style-type: square !important; }
 .loose { line-height: 2em !important; }
 .loose2 { line-height: 1.5em !important; }
