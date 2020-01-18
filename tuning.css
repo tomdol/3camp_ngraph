@@ -26,3 +26,10 @@ ul { list-style-type: square !important; }
     margin: 0 !important;
     padding: 0 !important;
 }
+
+div.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
