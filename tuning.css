@@ -4,8 +4,11 @@
 .reveal section img { border: none; background: none; box-shadow: none; }
 .accent { color: #e7ad52 !important; }
 .gray { color: #666 !important; }
-.white {color: #FFF !important; }
+.white { color: #FFF !important; }
+.green { color: #8ad105 !important; }
+.red { color: #F41760 !important; }
 .small { font-size: 0.6em !important; }
+.big { font-size: 2em !important; }
 .vsmall { font-size: 0.4em !important; }
 .fira { font-family: "Fira Code" !important; }
 .src { color: #777 !important; }
