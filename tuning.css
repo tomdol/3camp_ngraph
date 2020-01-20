@@ -40,3 +40,14 @@ div.row {
     justify-content: center;
     align-items: center;
 }
+
+div.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-start {
+    align-items: flex-start !important;
+}
