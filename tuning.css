@@ -8,8 +8,9 @@
 .green { color: #8ad105 !important; }
 .red { color: #F41760 !important; }
 .small { font-size: 0.6em !important; }
-.big { font-size: 2em !important; }
 .vsmall { font-size: 0.4em !important; }
+.medium { font-size: 1.5em !important; }
+.big { font-size: 2em !important; }
 .fira { font-family: "Fira Code" !important; }
 .src { color: #777 !important; }
 .m0 { margin: 0 !important;}

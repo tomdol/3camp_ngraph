@@ -104,19 +104,6 @@
                 <a href="https://towardsdatascience.com/converting-a-simple-deep-learning-model-from-pytorch-to-tensorflow-b6b353351f5d" class="vsmall src">towardsdatascience.com/converting-a-simple-deep-learning-model-from-pytorch-to-tensorflow</a>
             </section>
             <section>
-                <h3>Operatory w modelach</h3>
-                <div class="row">
-                    <div>Mobilenet V2 <br><img src="img/netron_mobilenet.png" style="width: 85%"></div>
-                    <div>Resnet50 <br><img src="img/netron_resnet.png" style="width: 85%"></div>
-                </div>
-            </section>
-            <section>
-                <img src="img/netron.png" style="width: 40%" class="m0">
-                <img src="img/netron_github.png" style="width: 80%;" class="m0">
-                <br>
-                <a href="https://github.com/lutzroeder/netron" class="fira"><i class="fab fa-github-square"></i> lutzroeder/netron</a>
-            </section>
-            <section>
                 <h3>Model jako funkcja</h3>
                 <div class="row">
                     <img src="img/Hapsik.jpg" style="width: 15rem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -141,10 +128,79 @@
                     <span class="fira">-></span>&nbsp;&nbsp;&nbsp;
                     <img src="img/ngraph.png" style="width: 15rem">&nbsp;&nbsp;&nbsp;
                     <span class="fira">-></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="big accent">WTF?</span>
+                    <span class="fragment big accent">WTF?</span>
                 </div>
                 <br>
                 <h2 class="fragment">aproksymacja funkcji</h2>
+            </section>
+            <section>
+                <div class="row medium">
+                    <span>model</span>
+                    <div class="fira small">&nbsp;&nbsp;->&nbsp;&nbsp;</div>
+                    <span>funkcja</span>
+                    <div class="fira small">&nbsp;&nbsp;->&nbsp;&nbsp;</div>
+                    <span>graf</span>
+                </div>
+                <div class="accent medium">$$f(x) = ax + b$$</div>
+                <img src="img/ax_plus_b.png" class="fragment">
+            </section>
+            <section>
+                <img src="img/netron.png" style="width: 40%" class="m0">
+                <img src="img/netron_github.png" style="width: 80%;" class="m0">
+                <br>
+                <a href="https://github.com/lutzroeder/netron" class="fira"><i class="fab fa-github-square"></i> lutzroeder/netron</a>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Grafy w DL</h3>
+                <img src="img/nGraph_diagram.png">
+            </section>
+            <section>
+                <h3>"Obliczenie" funkcji - inferencja</h3>
+                <img src="img/netron_github.png" style="width: 90%">
+            </section>
+            <section>
+                <h3>Implementacja naiwna</h3>
+                <ul>
+                    <li>Nie wykorzystuje możliwości HW</li>
+                    <li class="fragment">Jednostki obliczeniowe (rdzenie)</li>
+                    <li class="fragment">Wektoryzacja</li>
+                    <li class="fragment">Data layout</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Kernele</h3>
+                <ul>
+                    <li>Jedna z podstawowych optymalizacji</li>
+                    <li class="fragment">Ściśle powiązana ze sprzętem</li>
+                    <li class="fragment">Architektura & instrukcje</li>
+                    <li class="fragment">Typ danych, reprezentacja danych, rank</li>
+                    <li class="fragment">DNNL - Intel CPU & GPU</li>
+                </ul>
+                <br><br>
+                <div class="fragment fade-up"><a href="https://github.com/intel/mkl-dnn"><i class="fab fa-github-square"></i> intel/mkl-dnn</a></div>
+            </section>
+            <section>
+                <h3>Flow</h3>
+                <span class="fira">model -> graf -> kernele -> JIT -> HW</span>
+                <br><br>
+                <ul class="small fragment">
+                    <li>Apache* MXNet</li>
+                    <li>BigDL</li>
+                    <li>Caffe* Optimized for Intel Architecture</li>
+                    <li>Chainer*</li>
+                    <li>DeepLearning4J*</li>
+                    <li class="accent">Intel Nervana nGraph</li>
+                    <li>MATLAB* Deep Learning Toolbox</li>
+                    <li>Menoh*</li>
+                    <li>Microsoft* Cognitive Toolkit (CNTK)</li>
+                    <li>ONNX Runtime</li>
+                    <li>OpenVINO(TM) toolkit</li>
+                    <li>PaddlePaddle*</li>
+                    <li>PyTorch*</li>
+                    <li>Tensorflow*</li>
+                </ul>
             </section>
         </section>
     </div>
@@ -159,6 +215,7 @@
         dependencies: [
             { src: 'plugin/markdown/marked.js' },
             { src: 'plugin/markdown/markdown.js' },
+            { src: 'reveal.js/math.js', async: true }
             // { src: 'plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
         ]
     });
