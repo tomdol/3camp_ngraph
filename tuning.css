@@ -14,19 +14,18 @@
 .fira { font-family: "Fira Code" !important; }
 .src { color: #777 !important; }
 .m0 { margin: 0 !important;}
-ul { list-style-type: square !important; }
+ul { list-style-type: square !important; margin: 0 !important; }
 .loose { line-height: 2em !important; }
 .loose2 { line-height: 1.5em !important; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
+.f-start { align-items: flex-start !important; }
+.no-transform { text-transform: none; }
 .flex-center > .loose {
     margin: 1em;
 }
 .slide-number {
     background-color: #1A1A1A !important;
     color: #777 !important;
-}
-.no-transform {
-    text-transform: none;
 }
 
 .li-inline {
@@ -49,6 +48,4 @@ div.column {
     align-items: center;
 }
 
-.f-start {
-    align-items: flex-start !important;
-}
+div.MathJax_Display { margin: 0 !important; }

@@ -32,7 +32,7 @@
         <section data-transition="fade-out">
             <img src="img/intel-ai-1.svg" style="width: 30%">
             <br><br>
-            <div class="fragment">
+            <div class="fragment fade-up">
                 <div style="display: flex; justify-content: space-evenly">
                     <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
                         <img src="img/ngraph.png" style="width: 14rem">
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <br><br>
-            <span class="fragment">
+            <span class="fragment fade-up">
                 <a href="https://www.linkedin.com/in/tomasz-dolbniak/"><i class="fab fa-linkedin"></i> tomasz-dolbniak</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://github.com/tomdol"><i class="fab fa-github-square"></i> tomdol</a><br><br>
             </span>
@@ -113,11 +113,11 @@
                     <span class="accent big">PIES</span>
                 </div>
                 <div class="row f-start">
-                    <div class="fragment fira big">y = f(x)</div>
+                    <div class="fragment fade-up fira big">$$y = f(x)$$</div>
                     <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div class="column f-start">
-                        <span class="fragment fira green">1 => PIES</span>
-                        <span class="fragment fira red">0 => NIE PIES</span>
+                        <span class="fragment fade-up fira green">1 => PIES</span>
+                        <span class="fragment fade-up fira red">0 => NIE PIES</span>
                     </div>
                 </div>
             </section>
@@ -128,10 +128,10 @@
                     <span class="fira">-></span>&nbsp;&nbsp;&nbsp;
                     <img src="img/ngraph.png" style="width: 15rem">&nbsp;&nbsp;&nbsp;
                     <span class="fira">-></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="fragment big accent">WTF?</span>
+                    <span class="fragment fade-up big accent">WTF?</span>
                 </div>
                 <br>
-                <h2 class="fragment">aproksymacja funkcji</h2>
+                <h2 class="fragment fade-up">aproksymacja funkcji</h2>
             </section>
             <section>
                 <div class="row medium">
@@ -142,7 +142,7 @@
                     <span>graf</span>
                 </div>
                 <div class="accent medium">$$f(x) = ax + b$$</div>
-                <img src="img/ax_plus_b.png" class="fragment">
+                <img src="img/ax_plus_b.png" class="fragment fade-up">
             </section>
             <section>
                 <img src="img/netron.png" style="width: 40%" class="m0">
@@ -162,21 +162,21 @@
             </section>
             <section>
                 <h3>Implementacja naiwna</h3>
-                <ul>
+                <ul class="loose">
                     <li>Nie wykorzystuje możliwości HW</li>
-                    <li class="fragment">Jednostki obliczeniowe (rdzenie)</li>
-                    <li class="fragment">Wektoryzacja</li>
-                    <li class="fragment">Data layout</li>
+                    <li class="fragment fade-up">Jednostki obliczeniowe (rdzenie)</li>
+                    <li class="fragment fade-up">Wektoryzacja</li>
+                    <li class="fragment fade-up">Data layout</li>
                 </ul>
             </section>
             <section>
                 <h3>Kernele</h3>
-                <ul>
+                <ul class="loose">
                     <li>Jedna z podstawowych optymalizacji</li>
-                    <li class="fragment">Ściśle powiązana ze sprzętem</li>
-                    <li class="fragment">Architektura & instrukcje</li>
-                    <li class="fragment">Typ danych, reprezentacja danych, rank</li>
-                    <li class="fragment">DNNL - Intel CPU & GPU</li>
+                    <li class="fragment fade-up">Ściśle powiązane ze sprzętem</li>
+                    <li class="fragment fade-up">Architektura & instrukcje</li>
+                    <li class="fragment fade-up">Typ danych, reprezentacja danych, rank</li>
+                    <li class="fragment fade-up">DNNL - Intel CPU & GPU</li>
                 </ul>
                 <br><br>
                 <div class="fragment fade-up"><a href="https://github.com/intel/mkl-dnn"><i class="fab fa-github-square"></i> intel/mkl-dnn</a></div>
@@ -185,22 +185,26 @@
                 <h3>Flow</h3>
                 <span class="fira">model -> graf -> kernele -> JIT -> HW</span>
                 <br><br>
-                <ul class="small fragment">
-                    <li>Apache* MXNet</li>
-                    <li>BigDL</li>
-                    <li>Caffe* Optimized for Intel Architecture</li>
-                    <li>Chainer*</li>
-                    <li>DeepLearning4J*</li>
-                    <li class="accent">Intel Nervana nGraph</li>
-                    <li>MATLAB* Deep Learning Toolbox</li>
-                    <li>Menoh*</li>
-                    <li>Microsoft* Cognitive Toolkit (CNTK)</li>
-                    <li>ONNX Runtime</li>
-                    <li>OpenVINO(TM) toolkit</li>
-                    <li>PaddlePaddle*</li>
-                    <li>PyTorch*</li>
-                    <li>Tensorflow*</li>
-                </ul>
+                <div class="row fragment fade-up">
+                    <ul style="align-self: flex-start;">
+                        <li>Apache MXNet</li>
+                        <li>BigDL</li>
+                        <li>Caffe Optimized for Intel Architecture</li>
+                        <li>Chainer</li>
+                        <li>DeepLearning4J</li>
+                        <li class="accent">Intel Nervana nGraph</li>
+                        <li>MATLAB DL Toolbox</li>
+                    </ul>
+                    <ul style="align-self: flex-start;">
+                        <li>Menoh</li>
+                        <li>Microsoft Cognitive Toolkit (CNTK)</li>
+                        <li class="accent">ONNX Runtime</li>
+                        <li class="accent">OpenVINO(TM) toolkit</li>
+                        <li class="accent">PaddlePaddle</li>
+                        <li>PyTorch</li>
+                        <li class="accent">Tensorflow</li>
+                    </ul>
+                </div>
             </section>
         </section>
     </div>
