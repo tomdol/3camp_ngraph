@@ -182,7 +182,7 @@
                 <div class="fragment fade-up"><a href="https://github.com/intel/mkl-dnn"><i class="fab fa-github-square"></i> intel/mkl-dnn</a></div>
             </section>
             <section>
-                <h3>Flow</h3>
+                <h3>Direct optimization</h3>
                 <span class="fira">model -> graf -> kernele -> JIT -> HW</span>
                 <br><br>
                 <div class="row fragment fade-up">
@@ -205,6 +205,52 @@
                         <li class="accent">Tensorflow</li>
                     </ul>
                 </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Dlaczego nGraph?</h3>
+                <a href="https://arxiv.org/pdf/1801.08058.pdf"><i class="far fa-file-pdf"></i> Intel® nGraph™</a><br>
+                <span class="small">arxiv.org/pdf/1801.08058.pdf</span><br><br>
+                <ul class="loose">
+                    <li class="fragment fade-up">DO w każdym frameworku</li>
+                    <li class="fragment fade-up">Coraz więcej HW</li>
+                    <li class="fragment fade-up">Optymalizacje grafu</li>
+                </ul>
+            </section>
+            <section>
+                <h3>nGraph - kompilator</h3>
+                <ul class="loose">
+                    <li class="fragment fade-up">Inspirowany LLVM</li>
+                    <li class="fragment fade-up">Definiuje własny IR</li>
+                    <li class="fragment fade-up">IR niezależny or FW & HW</li>
+                    <li class="fragment fade-up accent fira">ngraph::Function</li>
+                </ul>
+            </section>
+            <section>
+                <h3>nGraph - flow</h3>
+                <div class="row">
+                    <ul class="small loose">
+                        <li class="fragment fade-up">Wczytanie modelu przez "bridge"</li>
+                        <li class="fragment fade-up">Skonstruowanie <span class="fira">ngraph::Function</span></li>
+                        <li class="fragment fade-up">Optymalizacje funkcji</li>
+                        <li class="fragment fade-up">Kompilacja funkcji</li>
+                        <li class="fragment fade-up">Optymalizacje (HW)</li>
+                        <li class="fragment fade-up">Inferencja</li>
+                    </ul>
+                    <div>&nbsp;&nbsp;&nbsp;</div>
+                    <img src="img/nGraph_diagram.png" style="width: 50%;">
+                </div>
+            </section>
+            <section>
+                <h3>Optymalizacje grafu</h3>
+                <ul class="loose">
+                    <li class="fragment fade-up">Niezależne od sprzętu</li>
+                    <li class="fragment fade-up">Analiza grafu - pattern matching</li>
+                    <li class="fragment fade-up">Zamiana na efektywniejsze rozwiązanie</li>
+                    <li class="fragment fade-up">IR niezależny or FW & HW</li>
+                    <li class="fragment fade-up accent fira">ngraph::Function</li>
+                </ul>
             </section>
         </section>
     </div>
