@@ -222,8 +222,8 @@
                 <h3>nGraph - kompilator</h3>
                 <ul class="loose">
                     <li class="fragment fade-up">Inspirowany LLVM</li>
-                    <li class="fragment fade-up">Definiuje własny IR</li>
-                    <li class="fragment fade-up">IR niezależny or FW & HW</li>
+                    <li class="fragment fade-up">Ma własną reprezentację grafu (IR)</li>
+                    <li class="fragment fade-up">IR niezależny or FW i HW</li>
                     <li class="fragment fade-up accent fira">ngraph::Function</li>
                 </ul>
             </section>
@@ -234,7 +234,7 @@
                         <li class="fragment fade-up">Wczytanie modelu przez "bridge"</li>
                         <li class="fragment fade-up">Skonstruowanie <span class="fira">ngraph::Function</span></li>
                         <li class="fragment fade-up">Optymalizacje funkcji</li>
-                        <li class="fragment fade-up">Kompilacja funkcji</li>
+                        <li class="fragment fade-up">Transformacja funkcji</li>
                         <li class="fragment fade-up">Optymalizacje (HW)</li>
                         <li class="fragment fade-up">Inferencja</li>
                     </ul>
@@ -248,9 +248,12 @@
                     <li class="fragment fade-up">Niezależne od sprzętu</li>
                     <li class="fragment fade-up">Analiza grafu - pattern matching</li>
                     <li class="fragment fade-up">Zamiana na efektywniejsze rozwiązanie</li>
-                    <li class="fragment fade-up">IR niezależny or FW & HW</li>
-                    <li class="fragment fade-up accent fira">ngraph::Function</li>
+                    <li class="fragment fade-up accent">"Function passes"</li>
                 </ul>
+            </section>
+            <section>
+                <h3>Implicit broadcast</h3>
+                <img src="img/implicit_bcast.png" alt="">
             </section>
         </section>
     </div>
