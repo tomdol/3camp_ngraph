@@ -215,6 +215,7 @@
                 <ul class="loose">
                     <li class="fragment fade-up">DO w każdym frameworku</li>
                     <li class="fragment fade-up">Coraz więcej HW</li>
+                    <li class="fragment fade-up">Coraz więcej operacji</li>
                     <li class="fragment fade-up">Optymalizacje grafu</li>
                 </ul>
             </section>
@@ -228,14 +229,18 @@
                 </ul>
             </section>
             <section>
-                <h3>nGraph - flow</h3>
+                <h3>nGraph - kompilator</h3>
+                <img src="img/nGraphCompilerstack.png" style="width: 75%">
+            </section>
+            <section>
+                <h3>nGraph - etapy kompilacji</h3>
                 <div class="row">
                     <ul class="small loose">
                         <li class="fragment fade-up">Wczytanie modelu przez "bridge"</li>
                         <li class="fragment fade-up">Skonstruowanie <span class="fira">ngraph::Function</span></li>
-                        <li class="fragment fade-up">Optymalizacje funkcji</li>
+                        <li class="fragment fade-up accent">Optymalizacje funkcji/grafu</li>
                         <li class="fragment fade-up">Transformacja funkcji</li>
-                        <li class="fragment fade-up">Optymalizacje (HW)</li>
+                        <li class="fragment fade-up">Optymalizacje związane z HW</li>
                         <li class="fragment fade-up">Inferencja</li>
                     </ul>
                     <div>&nbsp;&nbsp;&nbsp;</div>
@@ -253,7 +258,59 @@
             </section>
             <section>
                 <h3>Implicit broadcast</h3>
-                <img src="img/implicit_bcast.png" alt="">
+                <img src="img/implicit_bcast.png">
+            </section>
+            <section>
+                <h3>Constant folding</h3>
+                <img src="img/constant_folding.png">
+            </section>
+            <section>
+                <h3>NOP elimination</h3>
+                <ul class="loose">
+                    <li>Eliminacja <span class="accent">"bezsensownych operacji"</span></li>
+                    <li class="fragment fade-up">Convert&nbsp;&nbsp;&nbsp;<span class="fira"><i>int -> int</i></span></li>
+                    <li class="fragment fade-up">Broadast lub Reshape przy<br><span class="fira"><i>target_shape == input_shape</i></span></li>
+                    <li class="fragment fade-up">Redukcja bez podanej osi</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Kwantyzacja</h2>
+                <div>$$q(r) = round ( \frac{r}{s}) + z$$</div>
+            </section>
+            <section>
+                <h3>Typy vs zakresy</h3>
+                <ul class="loose">
+                    <li><span class="accent">fp32</span> $$1\times10^{-38} \longleftrightarrow 3\times10^{38}$$</li>
+                    <li><span class="accent">int8</span> $$-128 \longleftrightarrow 127$$</li>
+                    <li><span class="accent">uint8</span> $$0 \longleftrightarrow 255$$</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Energia i powierzchnia silikonu</h3>
+                <img src="img/data_types_performance.png" alt=""><br>
+                <a href="https://www.intel.ai/flexpoint-numerical-innovation-underlying-intel-nervana-neural-network-processor/" class="small">www.intel.ai/flexpoint-numerical-innovation-underlying-intel-nervana-neural-network-processor/</a>
+            </section>
+            <section>
+                <h3>Kwantyzacja - zalety</h3>
+                <ul class="loose">
+                    <li class="fragment fade-up">Szybciej</li>
+                    <li class="fragment fade-up">Mniej pamięci</li>
+                    <li class="fragment fade-up">Mniejszy model po serializacji</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Kwantyzacja</h3>
+                <a href="https://www.intel.ai/intel-deep-learning-boost">intel.ai/intel-deep-learning-boost</a>
+                <div class="row">
+                    <div class="accent" style="font-size: 10rem">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <a href="https://www.intel.com/content/www/us/en/benchmarks/2019-xeon-scalable-benchmark.html">Performance Benchmarks and Configuration Details for Intel® Xeon® Scalable Processors</a><br>
+                    </div>
+                </div>
             </section>
         </section>
     </div>
