@@ -131,7 +131,7 @@
                     <span class="fragment fade-up big accent">WTF?</span>
                 </div>
                 <br>
-                <h2 class="fragment fade-up">aproksymacja funkcji</h2>
+                <h3 class="fragment fade-up accent">model = aproksymacja funkcji</h3>
             </section>
             <section>
                 <div class="row medium">
@@ -277,15 +277,19 @@
         <section>
             <section>
                 <h2>Kwantyzacja</h2>
-                <div>$$q(r) = round ( \frac{r}{s}) + z$$</div>
+                <div style="font-size: 2em">$$q(r) = \lfloor r/s \rfloor + z$$</div>
             </section>
             <section>
                 <h3>Typy vs zakresy</h3>
                 <ul class="loose">
                     <li><span class="accent">fp32</span> $$1\times10^{-38} \longleftrightarrow 3\times10^{38}$$</li>
-                    <li><span class="accent">int8</span> $$-128 \longleftrightarrow 127$$</li>
-                    <li><span class="accent">uint8</span> $$0 \longleftrightarrow 255$$</li>
+                    <li class="fragment fade-up"><span class="accent">int8</span> $$-128 \longleftrightarrow 127$$</li>
+                    <li class="fragment fade-up"><span class="accent">uint8</span> $$0 \longleftrightarrow 255$$</li>
                 </ul>
+            </section>
+            <section>
+                <h3>Kwantyzacja</h3>
+                <img src="img/kwantyzacja.png" alt="">
             </section>
             <section>
                 <h3>Energia i powierzchnia silikonu</h3>
@@ -301,16 +305,29 @@
                 </ul>
             </section>
             <section>
-                <h3>Kwantyzacja</h3>
+                <h3>Kwantyzacja - VNNI</h3>
                 <a href="https://www.intel.ai/intel-deep-learning-boost">intel.ai/intel-deep-learning-boost</a>
-                <div class="row">
-                    <div class="accent" style="font-size: 10rem">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div>
-                        <a href="https://www.intel.com/content/www/us/en/benchmarks/2019-xeon-scalable-benchmark.html">Performance Benchmarks and Configuration Details for Intel® Xeon® Scalable Processors</a><br>
-                    </div>
-                </div>
+                <br><br>
+                <h3 class="fira"><i>AVX512_VNNI</i></h3>
+                <img src="img/xeons.png" style="width: 75%">
+                <h5>Intel Xeon Scalable Processor Gen 2</h5>
+            </section>
+            <section>
+                <img src="img/project_manager.png" alt="">
+                <br>
+                <a href="https://me.me/i/project-manager-is-a-person-who-thinks-nine-women-can-8863776" class="vsmall src">me.me/i/project-manager-is-a-person-who-thinks-nine-women-can-8863776</a>
+            </section>
+            <section>
+                <h3>fp32 vs int8</h3>
+                <img src="img/quant_perf.png" alt="">
+                <br>
+                <a href="https://medium.com/apache-mxnet/model-quantization-for-production-level-neural-network-inference-f54462ebba05" class="vsmall src">medium.com/apache-mxnet/model-quantization-for-production-level-neural-network-inference-f54462ebba05</a>
+            </section>
+            <section>
+                <h3>fp32 vs int8</h3>
+                <img src="img/quant_accuracy.png" style="width: 80%">
+                <br>
+                <a href="https://medium.com/apache-mxnet/model-quantization-for-production-level-neural-network-inference-f54462ebba05" class="vsmall src">medium.com/apache-mxnet/model-quantization-for-production-level-neural-network-inference-f54462ebba05</a>
             </section>
         </section>
     </div>
