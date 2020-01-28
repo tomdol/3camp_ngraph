@@ -62,6 +62,10 @@
                 <div class="fragment fade-up"><a href="https://pypi.org/project/ngraph-core/">pypi.org/project/ngraph-core</a></div>
             </section>
             <section>
+                <h3>ngraph.slack.com</h3>
+                <img src="img/ngraph_slack.png" alt="">
+            </section>
+            <section>
                 <div><img src="img/ngraph.png" style="width: 25%"></div>
                 <h4>od strony technicznej</h4>
                 <br>
@@ -141,7 +145,9 @@
                     <div class="fira small">&nbsp;&nbsp;->&nbsp;&nbsp;</div>
                     <span>graf</span>
                 </div>
+                <br>
                 <div class="accent medium">$$f(x) = ax + b$$</div>
+                <br>
                 <img src="img/ax_plus_b.png" class="fragment fade-up">
             </section>
             <section>
@@ -163,7 +169,9 @@
             <section>
                 <h3>Implementacja naiwna</h3>
                 <ul class="loose">
-                    <li>Nie wykorzystuje możliwości HW</li>
+                    <li>implementacja operatorów</li>
+                    <li>sekwencyjne wykonanie operacji</li>
+                    <li class="fragment fade-up">Nie wykorzystuje możliwości HW</li>
                     <li class="fragment fade-up">Jednostki obliczeniowe (rdzenie)</li>
                     <li class="fragment fade-up">Wektoryzacja</li>
                     <li class="fragment fade-up">Data layout</li>
@@ -183,7 +191,7 @@
             </section>
             <section>
                 <h3>Direct optimization</h3>
-                <span class="fira">model -> graf -> kernele -> JIT -> HW</span>
+                <span class="fira">model -> graf -> kernele -> HW</span>
                 <br><br>
                 <div class="row fragment fade-up">
                     <ul style="align-self: flex-start;">
@@ -278,6 +286,8 @@
             <section>
                 <h2>Kwantyzacja</h2>
                 <div style="font-size: 2em">$$q(r) = \lfloor r/s \rfloor + z$$</div>
+                <br>
+                <img src="img/kwantyzacja_linie.png" alt="">
             </section>
             <section>
                 <h3>Typy vs zakresy</h3>
@@ -299,9 +309,11 @@
             <section>
                 <h3>Kwantyzacja - zalety</h3>
                 <ul class="loose">
-                    <li class="fragment fade-up">Szybciej</li>
+                    <li>Mniej prądu</li>
+                    <li>Mniejszy chip</li>
                     <li class="fragment fade-up">Mniej pamięci</li>
                     <li class="fragment fade-up">Mniejszy model po serializacji</li>
+                    <li class="fragment fade-up">Szybciej</li>
                 </ul>
             </section>
             <section>
@@ -328,6 +340,23 @@
                 <img src="img/quant_accuracy.png" style="width: 80%">
                 <br>
                 <a href="https://medium.com/apache-mxnet/model-quantization-for-production-level-neural-network-inference-f54462ebba05" class="vsmall src">medium.com/apache-mxnet/model-quantization-for-production-level-neural-network-inference-f54462ebba05</a>
+            </section>
+        </section>
+        <section>
+            <iframe width="800" height="500" src="http://www.youtube.com/embed/C9S0nmNS8bQ"></iframe>
+        </section>
+        <section>
+            <section data-background="img/kuniec.png">
+                &nbsp;
+            </section>
+            <section>
+                <br>
+                <img src="img/ngraph.png" style="width: 30%"><br>
+                <h3 class="no-transform">nGraph</h3>
+                <br>
+                <div>
+                    <a href="https://tomdol.github.io/3camp_ngraph/">tomdol.github.io/3camp_ngraph</a><br><br>
+                </div>
             </section>
         </section>
     </div>
