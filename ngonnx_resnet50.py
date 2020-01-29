@@ -6,6 +6,7 @@ from ngraph_onnx.onnx_importer.importer import import_onnx_file
 import cv2
 import numpy as np
 
+# https://github.com/frank-wei/models/tree/master/models/image_classification/resnet#preprocessing
 def preprocess(img_data):
     mean_vec = np.array([0.485, 0.456, 0.406])
     stddev_vec = np.array([0.229, 0.224, 0.225])
@@ -20,7 +21,6 @@ backend = ng.runtime(backend_name="CPU")
 resnet50 = backend.computation(function)
 
 img = cv2.imread('/home/tomek/Desktop/1.jpg')
-img = np.asarray(img)
 img = img.transpose(2, 0, 1)
 img = img.reshape(1, 3, 224, 224)
 img = preprocess(img)
